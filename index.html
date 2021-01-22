@@ -80,5 +80,75 @@
         <marquee >这段文字将会在浏览器中进行滚动 </marquee>
         <marquee direction="right">这段文字将会在浏览器中进行滚动</marquee>
         <marquee direction="down">这段文字将会在浏览器中进行滚动</marquee>
+
+        <h1> div 层标签 </h1> <br>
+        div层标签来为HTML文档内大块的内容提供结构和背景元素，就像一个容器一样可大可小，可长可短，可宽可短。HTML页面中添加div的起始标签和结束标签之间的所有内容都是用来构成这个块的。其中所含有的元素特性由div的属性来控制或者是通过演示样式表格式化这个块来进行控制。
+        <div> style</div>
+        <div style="background-color: red; height:58"></div>"</div>
+        <div style="background-color:yellow; height:58"></div>"</div>
+        <div style="background-color:black ; height:58"></div>"</div>
+
+        <h1>table 表格标签</h1>
+        <table>
+            <tr><td><td></td></tr>
+            <tr><td><td></td></tr>
+        </table>
+
+        <table border="2"> <!-- 2描述表格边框的大小-->
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+        </table>
+
+        <table border="1" height="200" widht="300">
+
+        <tr>
+            <td>手机充值</td>
+            <td colspan="2">办公文具</td>
+        </tr>
+        <tr>
+            <td rowspan="2">各种卡的汇总</td>
+            <td>铅笔</td>
+            <td > 彩笔</td>
+        </tr>
+        <tr>
+            <td>打印</td>
+            <td>刻录</td>
+        </tr>
+        
+        </table>
+
+        <h1> <font size="+3" color="red" face="隶书">表单元素</font></h1>
+        <br>
+
+        <form action="index.html" method="get">
+            账号：<input type="text" name="loginID"/> <br>
+            密码：<input type="password" name="password"/>
+            <br> <input type="submit" value="注册"/>
+        </form>
+        <br>
+        type 有：text, password, checkbox, radio, submit, reset, file.hidden, image, button, button <br>
+        name 指表单名称。<br>
+        value:指表单的初始值，type为radio时必须指定一个值 <br>
+        size: 指表单的初始宽度，若为text, password,则大小以字符为单位 <br>
+        maxlenght:最大字符数 <br>
+        checked:boolen型， 控件radio,checkbox的属性。 <br>
+
+        <form>
+            <input type="text" name="text1" value="文本框" maxlength="5" /> <br>
+            男<input type="radio" value="男"  name="gen" checked="checked" /> <br>
+            女<input type="radio" value="女" name="gen" /> <br>
+            男和女控件的名称是同一个，表示是一对 <br>
+            <input type="checkbox" value="1" name="a"/>
+            <input type="checkbox" value="2" name="a"/> <br>
+            多选框提交的值是name的值，而单选框提交的是value值
+        </form>
     </body>
 </html>
