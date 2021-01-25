@@ -34,5 +34,21 @@
         </script>
         
         <button type="button" onclick="myFunction()">点击这里</button>
+
+        <h1> 改变html图像 </h1>
+        <script>
+            function changeImage()
+            {
+                element=document.getElementById('myimage')
+                if(element.src.match('bulbon')) {
+                    element.src="../image/light/pic_bulboff.gif";
+                } else {
+                    element.src="../image/light/pic_bulbon.gif";
+                }
+            }
+        </script>
+        <img id="myimage" onclick="changeImage()" src="../image/light/pic_bulboff.gif" width="100" height="
+        180">
+        <p> 点击灯泡打开或者关闭</p>
     </body>
 </html>
