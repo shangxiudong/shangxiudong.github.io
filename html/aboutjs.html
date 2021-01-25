@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title> 菜鸟教程(runnoob.com)</title>
+            <script>
+                function displayDate(){
+                    document.getElementById("demo").innerHTML=Date();
+                }
+            </script>
+        </meta>
+    </head>
+    <body>
+        <h1>我的第一个Javascript程序</h1>
+        <p id="demo">这是一个段落</p>
+        <button type="button" onclick="displayDate()"> 显示日期</button>
+        <h2>在正文中直接运行javascript</h2>
+        <script>
+            document.write("<h1>这是一个标题</h1>");
+            document.write("<p>这是一个段落</p>");
+        </script>
+        <h2> 事件响应</h2>
+        <button type="button" onclick="alert('欢迎')">点我</button>
+        <h2> 改变html的内容</h2>
+        <p id="demo1">
+            javascript 能改变HTML元素的内容。
+        </p>
+        <script>
+            function myFunction()
+            {
+                x=document.getElementById("demo1");
+                x.innerHTML="Hello javascript";
+            }
+        </script>
+        
+        <button type="button" onclick="myFunction()">点击这里</button>
+    </body>
+</html>
