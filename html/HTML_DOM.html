@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+    <body>
+        <h1> in this page, we are about to learn how to use JavaScript to change the HTML content</h1>
+        <h2> be hold, this will be funny</h2>
+        <script>
+            document.write(Date());
+        </script>
+    </body>
+    <p>
+        <font size="+2" color="red" face="小篆">
+            绝对不要在文档（DOM）加载完成之后使用document.write()， 这会覆盖该文档
+        </font>
+    </p>
+    <h1><font size="+2" color="green">使用innerHTML来修改HTML标签内的内容</font></h1>
+    <body>
+        <p id="p1"> hello world!</p>
+        <script>
+            document.getElementById("p1").innerHTML=("新世界！");
+        </script>
+    </body>
+    <h1><font size="+2" color="green">使用attribute修改HTML标签的属性</font></h1>
+    <body>
+        <img id="image" src="../image/20210121094205.jpg">
+        <script>
+            document.getElementById("image").src="../image/20210121103745.jpg";
+        </script>
+    </body>
+
+    <h1><font size="+2" color="green">使用.style.property 改变css</font></h1>
+    <head>
+        <meta charset="utf-8">
+        <title> 菜鸟教程</title>
+    </head>
+    <body>
+        <p id="p1"> hello world!</p>
+        <p id="p2"> hello world!</p>
+        <script>
+            document.getElementById("p2").style.color="blue";
+            document.getElementById("p2").style.fontFamily="Arial";
+            document.getElementById("p2").style.fontSize="larger";
+        </script>
+        <p> 以上段落通过脚本修改。</p>
+    </body>
+
+    <h1><font size="+2" color="green">使用事件</font></h1>
+    <p> 以下都属于事件的一种</p> <br>
+
+</html>
