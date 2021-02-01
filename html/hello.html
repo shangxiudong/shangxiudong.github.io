@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title> 鼠标悬停事件</title>
+        <script>
+            var timeout = 3
+            function changcontent()
+            {
+                // document.getElementById("demo").innerHTML = Date();
+                window.location.replace("https://www.baidu.com");
+                // top.location="./1page.html";
+                // window.location.href("https://www.baidu.com");
+                var old_time;
+                var new_time = new Date().getTime();
+                if(old_time != null) {
+                    if(new_time - old_time > timeout) {
+                        // window.location.replace("https://www.baidu.com");
+                        // window.location.href("https://www.baidu.com");
+                    }
+                }
+                var old_time = new_time();
+            }
+        </script>
+        <body onmousemove="changcontent()">
+            <ul type="列表序号类型">
+                <Li>1</Li>
+                <Li>2</Li>
+                <Li>3</Li>
+                <Li>......</Li>
+            </ul> 
+        </body>
+    </head>
+</html>
