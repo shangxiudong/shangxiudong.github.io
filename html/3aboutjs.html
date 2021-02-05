@@ -90,5 +90,64 @@
         </script>
         <input id="demo3" type="text">
         <button type="button" onclick="popoutNumber2()">点击这里</button>
+
+
+        <h1> javascript 表单</h1>
+        <script>
+            function validateForm() {
+                var x = document.forms["myForm"]["fname"].value;
+                if(x ==null || x=="") {
+                    alert("需要输入名字");
+                    return false;
+                }
+            }
+        </script>
+        <div>
+            <form name="myForm" action="demo_form.php" onsubmit="return validateForm()" method="post">
+            名字：<input type="text" name="fname">
+            <input type="submit" value="提交">
+            </form>
+        </div>
+        <h1> 验证输入内容是否合规</h1>
+        <p> please input a digital number between 1 and 10</p> <br>
+        <input id="numb">
+        <button type="button" onclick="checkdigital()">提交</button>
+        <br>
+        <p id="demodig"></p>
+        <script>
+            function checkdigital() {
+                var x, text;
+                x = document.getElementById("numb").value;
+                console.log(x);
+                if(isNaN(x) || x<1 || x>10) {
+                    text="输入错误";
+                } else {
+                    text="输入正确";
+                }
+                document.getElementById("demodig").innerHTML = text;
+            }
+        </script>
+        <h1> 使用html自带的表单也可以验证</h1>
+        <form action="demo_form.php" method="post">
+            <input type="text" name="fname" required="required">
+            <input type="submit" value="提交">
+        </form>
+
+        <h1> 有效email地址的验证</h1>
+        <script>
+            function validateForm2() {
+                var x=document.forms["myForm2"]["email"].value;
+                var atpos=x.indexOf("@");
+                var dotpos=x.lastIndexOf(".");
+                if(atpos<1 || dotpos< atpos+2 || dotpos+2>=x.length) { //判断email地址格式是否正确
+                    alert("这不是一个有效的e-mail地址");
+                    return false;
+                }
+            }
+        </script>
+        <form name="myForm2" action="demo-form.php" onsubmit="return validateForm2();" method="post">
+            Email:<input type="text" name="email">
+            <input type="submit" value="提交">
+        </form>
     </body>
 </html>
